@@ -25,3 +25,6 @@ System Settings > Accessibility > Pointer Control > Alternative Control Methods 
 ## Fix: scrolling does not work in the Telegram video chat participant list
 The first rule uses Karabiner's virtual-mouse wheel, which some Telegram panels ignore. Use `karabiner-telegram-pixel-scroll-rule.json` instead (delete the earlier Telegram rule first so they do not both fire). It sends a real pixel-scroll event at the pointer position, so put the pointer over the list. Each key press scrolls 150 px; tap repeatedly. Change `-150`/`150` to adjust distance or direction.
 Karabiner may need Accessibility permission (System Settings > Privacy & Security > Accessibility) for the event to be posted.
+
+## Fastest install (Mac Terminal)
+From this folder run `./install-mac.sh`, then Karabiner-Elements > Complex Modifications > Add predefined rule > Enable "Telegram video chat list scroll". Remove any earlier Telegram rule first.

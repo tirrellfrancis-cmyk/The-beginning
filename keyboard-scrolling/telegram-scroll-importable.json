@@ -1,0 +1,62 @@
+{
+  "title": "Telegram video chat list scroll",
+  "rules": [
+    {
+      "description": "Telegram only (pixel scroll, works in video chat lists): Control+Option+Up/Down",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -l JavaScript -e 'ObjC.import(\"ApplicationServices\");var e=$.CGEventCreateScrollWheelEvent2($(),0,1,-150,0,0);$.CGEventPost($.kCGHIDEventTap,e);'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^ru\\.keepcoder\\.Telegram$",
+                "^com\\.tdesktop\\.Telegram$"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+              "mandatory": [
+                "left_control",
+                "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "osascript -l JavaScript -e 'ObjC.import(\"ApplicationServices\");var e=$.CGEventCreateScrollWheelEvent2($(),0,1,150,0,0);$.CGEventPost($.kCGHIDEventTap,e);'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^ru\\.keepcoder\\.Telegram$",
+                "^com\\.tdesktop\\.Telegram$"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
