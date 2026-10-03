@@ -1,0 +1,26 @@
+{
+  "title": "Telegram: scroll with Control+Option+Up/Down Arrow",
+  "rules": [
+    {
+      "description": "Telegram only: Control+Option+Up/Down Arrow scrolls the chat",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "down_arrow", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": 32 } }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^ru\\.keepcoder\\.Telegram$", "^com\\.tdesktop\\.Telegram$"] }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "up_arrow", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": -32 } }],
+          "conditions": [
+            { "type": "frontmost_application_if", "bundle_identifiers": ["^ru\\.keepcoder\\.Telegram$", "^com\\.tdesktop\\.Telegram$"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

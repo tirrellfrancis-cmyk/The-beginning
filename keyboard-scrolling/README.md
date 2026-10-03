@@ -38,3 +38,9 @@ Mouse Keys moves the pointer and clicks. It does not scroll, so Part 2 adds a cu
 - Mac: add the rule in `karabiner-scroll-arrows-rule.json` the same way as Part 2. Swap `32` and `-32` if reversed.
 - Windows: run `scroll-arrows.ahk` the same way as `scroll.ahk`.
 - Both are separate from the J/K versions, so they can run together.
+
+## Telegram
+Telegram Desktop has no setting for custom keyboard shortcuts, so the shortcut is added from outside the app and limited to Telegram.
+- Mac: add `karabiner-telegram-scroll-rule.json` in Karabiner-Elements (covers `ru.keepcoder.Telegram` and `com.tdesktop.Telegram`). Remove the general arrow rule if you want scrolling only in Telegram.
+- Windows: run `telegram-scroll.ahk` (matches `Telegram.exe`).
+- Shortcut: Ctrl + Option/Alt + Down / Up Arrow scrolls the open chat or chat list under the pointer.
