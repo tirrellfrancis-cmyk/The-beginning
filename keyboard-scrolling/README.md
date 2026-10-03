@@ -21,3 +21,7 @@ System Settings > Accessibility > Pointer Control > Alternative Control Methods 
 - Pasting the file with the outer `title` and `rules` wrapper into "Add your own rule" fails; paste only the rule object.
 - Karabiner needs its permissions approved or the shortcut does nothing.
 - Windows files (`*.ahk`) are not needed on a Mac.
+
+## Fix: scrolling does not work in the Telegram video chat participant list
+The first rule uses Karabiner's virtual-mouse wheel, which some Telegram panels ignore. Use `karabiner-telegram-pixel-scroll-rule.json` instead (delete the earlier Telegram rule first so they do not both fire). It sends a real pixel-scroll event at the pointer position, so put the pointer over the list. Each key press scrolls 150 px; tap repeatedly. Change `-150`/`150` to adjust distance or direction.
+Karabiner may need Accessibility permission (System Settings > Privacy & Security > Accessibility) for the event to be posted.
