@@ -1,0 +1,20 @@
+{
+  "title": "Scroll with Control+Option+Up/Down Arrow",
+  "rules": [
+    {
+      "description": "Scroll with Control+Option+Up/Down Arrow",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "down_arrow", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": 32 } }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "up_arrow", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": -32 } }]
+        }
+      ]
+    }
+  ]
+}

@@ -33,3 +33,8 @@ Mouse Keys moves the pointer and clicks. It does not scroll, so Part 2 adds a cu
 - Mac laptop: while Mouse Keys is on, U I O J K L M , . stop typing letters. Toggle off with Option x5.
 - Windows: Num Lock off means the number pad will not move the pointer.
 - Mouse Keys alone never scrolls.
+
+## Arrow-key version: Ctrl + Option/Alt + Down / Up Arrow
+- Mac: add the rule in `karabiner-scroll-arrows-rule.json` the same way as Part 2. Swap `32` and `-32` if reversed.
+- Windows: run `scroll-arrows.ahk` the same way as `scroll.ahk`.
+- Both are separate from the J/K versions, so they can run together.
