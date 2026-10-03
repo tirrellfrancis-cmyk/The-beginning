@@ -1,0 +1,20 @@
+{
+  "title": "Scroll with Control+Option+J/K",
+  "rules": [
+    {
+      "description": "Scroll with Control+Option+J/K",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "j", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": 32 } }]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "k", "modifiers": { "mandatory": ["left_control", "left_option"] } },
+          "to": [{ "mouse_key": { "vertical_wheel": -32 } }]
+        }
+      ]
+    }
+  ]
+}
